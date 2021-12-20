@@ -70,14 +70,14 @@ describe.only('Users', () => {
       });
   });
 
-  // it('DELETE /users/:id', () => {
-  //   return request
-  //     .delete('users/111')
-  //     .set('Authorization', `Bearer ${TOKEN}`)
-  //     .then((res) => {
-  //       console.log(`Delete successfully`);
-  //       // expect(res.body.data?.message).to.be.equals('Resource not found');
-  //       expect(res.body.data).to.be.eq(null);
-  //     });
-  // });
+  it('DELETE /users/:id', () => {
+    return request
+      .delete('users/111')
+      .set('Authorization', `Bearer ${TOKEN}`)
+      .then((res) => {
+        console.log(`Delete successfully`);
+        // expect(res.body.data?.message).to.be.equals('Resource not found');
+        expect(res.body.data).to.be.eq(null);
+      });
+  });
 });
