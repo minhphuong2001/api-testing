@@ -18,11 +18,8 @@ describe.only('Users', () => {
   });
 
   it('GET /users/:id', () => {
-    // return request.get(`users/1?access-token=${TOKEN}`).then((res) => {
-    //   expect(res.body.data.id).to.be.eq(1);
-    // });
-    return request.get(`users/1570?access-token=${TOKEN}`).then((res) => {
-      expect(res.body.data.id).to.be.eq(1570);
+    return request.get(`users/1005?access-token=${TOKEN}`).then((res) => {
+      expect(res.body.data.id).to.be.equal(1005);
     });
   });
 
