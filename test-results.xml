@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.0540" tests="9" failures="0">
+  <testsuite name="Root Suite" timestamp="2021-12-20T15:20:15" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Posts" timestamp="2021-12-20T15:20:15" tests="0" file="E:\JS\JavaScript-API-Automation-Tests\test\posts.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="POST" timestamp="2021-12-20T15:20:15" tests="2" file="E:\JS\JavaScript-API-Automation-Tests\test\posts.js" time="0.8100" failures="0">
+    <testcase name="Posts POST /posts" time="0.3830" classname="/posts">
+    </testcase>
+    <testcase name="Posts POST posts/:id" time="0.4250" classname="posts/:id">
+    </testcase>
+  </testsuite>
+  <testsuite name="Negative Tests" timestamp="2021-12-20T15:20:16" tests="2" file="E:\JS\JavaScript-API-Automation-Tests\test\posts.js" time="0.8930" failures="0">
+    <testcase name="Posts Negative Tests 422 Data validation failed" time="0.4600" classname="422 Data validation failed">
+    </testcase>
+    <testcase name="Posts Negative Tests 401 Authentication failed" time="0.4330" classname="401 Authentication failed">
+    </testcase>
+  </testsuite>
+  <testsuite name="Users" timestamp="2021-12-20T15:20:17" tests="5" file="E:\JS\JavaScript-API-Automation-Tests\test\users.js" time="1.8960" failures="0">
+    <testcase name="Users GET /users" time="0.3820" classname="GET /users">
+    </testcase>
+    <testcase name="Users GET /users/:id" time="0.4020" classname="GET /users/:id">
+    </testcase>
+    <testcase name="Users GET /users with query params" time="0.3650" classname="GET /users with query params">
+    </testcase>
+    <testcase name="Users POST /users" time="0.3860" classname="POST /users">
+    </testcase>
+    <testcase name="Users PUT /users/:id" time="0.3590" classname="PUT /users/:id">
+    </testcase>
+  </testsuite>
+</testsuites>
