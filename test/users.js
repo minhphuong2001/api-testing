@@ -71,7 +71,7 @@ describe.only('ABOUT USERS', () => {
       .set('Authorization', `Bearer ${TOKEN}`)
       .then((res) => {
         console.log(`Delete successfully`);
-        expect(res.body.data).to.be.eq(null);
+        expect(res.body.data?.message).to.be.eq('Resource not found');
       });
   });
 });
