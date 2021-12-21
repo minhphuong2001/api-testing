@@ -60,7 +60,7 @@ describe.only('ABOUT USERS', () => {
       .set('Authorization', `Bearer ${TOKEN}`)
       .send(data)
       .then((res) => {
-        // console.log(res.body);
+        console.log(res.body);
         expect(res.body.data).to.deep.include(data);
       });
   });
