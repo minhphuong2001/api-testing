@@ -5,13 +5,8 @@ import { expect } from 'chai';
 
 const TOKEN = process.env.USER_TOKEN;
 
-describe.only('Users', () => {
+describe.only('ABOUT USERS', () => {
   it('GET /users', () => {
-    // request.get(`users?access-token=${TOKEN}`).end((err, res) => {
-    //   expect(res.body.data).to.not.be.empty;
-    //   done();
-    // });
-
     return request.get(`users?access-token=${TOKEN}`).then((res) => {
       expect(res.body.data).to.not.be.empty;
     });
@@ -24,15 +19,15 @@ describe.only('Users', () => {
   });
 
   it('GET /users with query params', () => {
-    const url = `users?access-token=${TOKEN}&page=5&gender=Female&status=Active`;
+    const url = `users?access-token=${TOKEN}&page=5&gender=female&status=active`;
 
     return request.get(url).then((res) => {
-      expect(res.body.data).to.be.empty;
-      // expect(res.body.data).to.not.be.empty;
-      // res.body.data.forEach((data) => {
-      //   expect(data.gender).to.eq('Female');
-      //   expect(data.status).to.eq('Active');
-      // });
+      // expect(res.body.data).to.be.empty;
+      expect(res.body.data).to.not.be.empty;
+      res.body.data.forEach((data) => {
+        expect(data.gender).to.eq('female');
+        expect(data.status).to.eq('active');
+      });
     });
   });
 
@@ -49,7 +44,7 @@ describe.only('Users', () => {
       .set('Authorization', `Bearer ${TOKEN}`)
       .send(data)
       .then((res) => {
-        // console.log(res.body);
+        console.log(res.body);
         expect(res.body.data).to.deep.includes(data);
       });
   });
@@ -65,7 +60,7 @@ describe.only('Users', () => {
       .set('Authorization', `Bearer ${TOKEN}`)
       .send(data)
       .then((res) => {
-        console.log(res.body);
+        // console.log(res.body);
         expect(res.body.data).to.deep.include(data);
       });
   });
@@ -76,7 +71,6 @@ describe.only('Users', () => {
       .set('Authorization', `Bearer ${TOKEN}`)
       .then((res) => {
         console.log(`Delete successfully`);
-        // expect(res.body.data?.message).to.be.equals('Resource not found');
         expect(res.body.data).to.be.eq(null);
       });
   });
